@@ -16,17 +16,19 @@ See the files in subdirectories of example\data for sample inputs.
 
 The known 'start date' for each Id is specified in a separate CSV file,
 with an additional offset.
+
 See the file example\date_day1.csv for an example.
 
 Many parameters can be specified in an associated configuration file.
 This can specify the location of the input and output, and column names
 and values.
+
 By default this file is assumed to be named config.ini in the directory
 this is executed in; but can be specified from the command line with -c.
 See the file example\config.ini for a full example.
 
-To test the script from the example directory run:
-    python3 ..\report.py
+To test the script from the root directory run:
+    python3 report.py -c example\config.ini
 
 This library is released under GPLv3 Licence; see licences.
 
