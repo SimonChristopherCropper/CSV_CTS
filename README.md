@@ -10,6 +10,8 @@ date.
 It outputs an output file with the results, and a log file with any
 issues found while processing files.
 
+![Overview Diagram](images/CSV_CTS_Overview.png)
+
 ##Requirements
 
 * Python 3.6
