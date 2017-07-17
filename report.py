@@ -240,7 +240,7 @@ def cli():
                      ', '.join(str(ids) for ids in sorted(missing_starts)))
 
 
-    df['delta'] = (df.index.map(lambda x: x[1]) - df['date_one'])
+    df['delta'] = pd.Series(df.index.map(lambda x: x[1]), df.index) - df['date_one']
     df['delta'] = df['delta'] - pd.Timedelta(days=date1_offset)
 
     # Filter down to days between 0 and max_dates
