@@ -22,7 +22,7 @@ issues found while processing files.
 
 To test the script from the root directory run:
 
-    python3 report.py -c example\config.ini
+    python report.py -c example\config.ini
 
 ## Input files
 
@@ -50,6 +50,18 @@ and values.
 By default this file is assumed to be named config.ini in the directory
 this is executed in; but can be specified from the command line with -c.
 See the file `CSV_CTS\example\config.ini` for a full example.
+
+## Tools
+
+With large amounts of data being manually collated there is potental for errors in the source files. A program has been provided that collates all the CSV files within a directory tree that matches the same file mask as the main routine and puts the data into a single file for review so errors and inconsistencies can be identified.
+
+Normally the main program captures most errors and inserts them in the log, so usually this program is only needed if the main routine throws and error that can not be explained
+
+To run the collation routine from the root directory type:
+
+	python collate_csv.py -c example\config.ini
+
+The output file can be reviewed in any package that recognises CSV files (e.g. Microsoft Excel, LibreOffice Calc).
 
 ## License
 
